@@ -1,0 +1,290 @@
+<!doctype html>
+<html amp lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <title>体温報告 | 毎日の体温をメールやLINEなどを使って簡単報告するアプリ</title>
+    <link rel="canonical" href="https://ampdocs.com/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ampdocs">
+    <meta property="og:url" content="https://rampdocs.com/">
+    <meta property="og:title" content="体温報告">
+    <meta property="og:description" content="毎日の体温をメールやLINEなどを使って簡単報告するアプリ。体温はキーボードを使わずにタップするだけで入力が可能">
+    <meta property="og:image" content="https://taion.me/images/ogp.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "author": {
+          "@type": "Person",
+          "name": "かわちゃん"
+        },
+        "headline": "体温報告",
+        "datePublished": "2020-04-28T00:00:00Z",
+        "image": [
+          "https://taion.me/images/ogp.png"
+        ],
+        "description": "毎日の体温をメールやLINEなどを使って簡単報告するアプリ。体温はキーボードを使わずにタップするだけで入力が可能",
+        "publisher": {
+          "@type": "Organization",
+          "name": "体温報告",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://taion.me/images/logo.png",
+            "width": 600,
+            "height": 60
+          }
+        }
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<style amp-custom>
+* {
+  vertical-align: top;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+body {
+  font-family: 'M PLUS Rounded 1c', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+}
+.col-1 {
+  width: 8.33333%;
+  display: inline-block;
+}
+.col-2 {
+  width: 16.66667%;
+  display: inline-block;
+}
+.col-3 {
+  width: 25%;
+  display: inline-block;
+}
+.col-4 {
+  width: 33.33333%;
+  display: inline-block;
+}
+.col-5 {
+  width: 41.66667%;
+  display: inline-block;
+}
+.col-6 {
+  width: 50%;
+  display: inline-block;
+}
+.col-7 {
+  width: 58.33333%;
+  display: inline-block;
+}
+.col-8 {
+  width: 66.66667%;
+  display: inline-block;
+}
+.col-9 {
+  width: 75%;
+  display: inline-block;
+}
+.col-10 {
+  width: 83.33333%;
+  display: inline-block;
+}
+.col-12 {
+  width: 100%;
+  display: inline-block;
+}
+@media (max-width:40rem) {
+  .xs-hide {
+    display: none
+  }
+}
+@media (min-width:52.06rem) {
+  .sm-hide {
+    display: none
+  }
+  .sm-col-1 {
+    width: 8.33333%;
+    display: inline-block;
+  }
+  .sm-col-2 {
+    width: 16.66667%;
+    display: inline-block;
+  }
+  .sm-col-3 {
+    width: 25%;
+    display: inline-block;
+  }
+  .sm-col-4 {
+    width: 33.33333%;
+    display: inline-block;
+  }
+  .sm-col-6 {
+    width: 50%;
+    display: inline-block;
+  }
+  .sm-col-8 {
+    width: 66.66667%;
+    display: inline-block;
+  }
+  .sm-col-10 {
+    width: 83.33333%;
+    display: inline-block;
+  }
+  .sm-col-12 {
+    width: 100%;
+    display: inline-block;
+  }
+}
+#bg {
+  position: absolute;
+  background-color: #74b9ff;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  z-index: -1;
+}
+header h1 {
+  height: 50px;
+  margin: 0;
+}
+header h1 a {
+  color: black;
+  text-decoration: none;
+}
+footer {
+  padding: 40px 0 8px 0;
+  text-align: right;
+}
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.info h2 {
+  font-size: 200%;
+  font-weight: bold;
+}
+.info h3 {
+  font-size: 120%;
+  font-weight: normal;
+}
+.info h3 > em {
+  background:linear-gradient(transparent 70%, #ff7675 0%);
+}
+.characteristic {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.characteristic h3 {
+  background-color: #74b9ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.detail {
+  margin-bottom: 40px;
+}
+.detail amp-img {
+  border: 1px solid #b2bec3;
+}
+.detail h3 {
+  display: inline;
+  font-size: 150%;
+  font-weight: bold;
+  background:linear-gradient(transparent 70%, #ff7675 0%);
+}
+.detail_box {
+  margin: 32px 12px;
+}
+</style>
+</head>
+<body>
+  <div id="bg"></div>
+  <div class="container">
+    <header>
+    <h1><amp-img src="./images/icon.png" alt="体温報告" width="50" height="50"></amp-img><a href="/">体温報告</a></h1>
+    </header>
+    <main>
+      <div class="row info">
+        <div class="col-9">
+          <h2>毎日の体温を<br>メールやLINEで<br>簡単報告</h2>
+          <h3><em>提携文を使って報告</em><br>
+          <em>キーボードで文章を入力する必要も無し</em></h3>
+        </div>
+        <div class="col-3">
+          <amp-img src="./images/iphone.png" alt="体温報告" width="950" height="1894" layout="responsive"></amp-img>
+        </div>
+      </div>
+      <div class="row characteristic">
+        <div class="col-3">
+          <h3><i class="fa fa-thermometer-half" aria-hidden="true"></i></h3>
+          <h4>らくらく登録</h4>
+        </div>
+        <div class="col-3">
+          <h3><i class="fa fa-paper-plane-o" aria-hidden="true"></i></h3>
+          <h4>メールやLINEで送信</h4>
+        </div>
+        <div class="col-3">
+          <h3><i class="fa fa-pencil" aria-hidden="true"></i></h3>
+          <h4>提携文</h4>
+        </div>
+        <div class="col-3">
+          <h3><i class="fa fa-eye" aria-hidden="true"></i></h3>
+          <h4>体温が色でわかる</h4>
+        </div>
+      </div>
+      <div class="row detail">
+        <div class="col-2"></div>
+        <div class="col-3"><amp-img src="./images/info_01.png" alt="体温報告" width="750" height="1170" layout="responsive"></amp-img></div>
+        <div class="col-5 detail_box">
+          <h3>らくらく登録</h3>
+          <p>起動した瞬間にわかる直感的なUI<br>入力はキーボード不要で最大2タップで登録が可能</p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row detail">
+        <div class="col-2"></div>
+        <div class="col-5 detail_box">
+          <h3>メールやLINEで送信</h3>
+          <p>登録した体温は報告ボタンからメールやLINEで送信<br>Webサイトなどがある場合はそのURLを登録すれば、体温をコピーしてアクセスすることができる！</p>
+        </div>
+        <div class="col-3"><amp-img src="./images/info_02.png" alt="体温報告" width="750" height="1170" layout="responsive"></amp-img></div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row detail">
+        <div class="col-2"></div>
+        <div class="col-3"><amp-img src="./images/info_03.png" alt="体温報告" width="750" height="1170" layout="responsive"></amp-img></div>
+        <div class="col-5 detail_box">
+          <h3>提携文</h3>
+          <p>送信する本文は登録することができるので、「お疲れ様です。XXです」などの決まった文章は自動で入力されます。もちろん提携文の変更も可能です。</p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row detail">
+        <div class="col-2"></div>
+        <div class="col-5 detail_box">
+          <h3>体温が色でわかる</h3>
+          <p>理想的な体温は36.5～37.1度と言われています。理想的な体温の場合は青色、少し低かったり高かったりする場合は黄色、低すぎたり高すぎる場合は赤色で表示<br>目で体温の状況を確認できる！</p>
+        </div>
+        <div class="col-3"><amp-img src="./images/info_04.png" alt="体温報告" width="750" height="1170" layout="responsive"></amp-img></div>
+        <div class="col-2"></div>
+      </div>
+    </main>
+    <footer>体温報告 © 2020</footer>
+  </div>
+</body>
+</html>
